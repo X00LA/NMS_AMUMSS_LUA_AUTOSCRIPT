@@ -608,36 +608,34 @@ end
 
 -- added at version 1.1 for further improvements.
 -- Buffer object to implement additional features.
-function buffer_GRS
-	local self = 	{
-					SavedFoundKeysAndValuesTable = glb_FoundKeysAndValuesTable
-					SavedConvertedKeysAndValuesTable = glb_ConvertedKeysAndValuesTable
-					}
+function buffer_GRS()
+	local self = {
+	  SavedFoundKeysAndValuesTable = glb_FoundKeysAndValuesTable,
+	  SavedConvertedKeysAndValuesTable = glb_ConvertedKeysAndValuesTable
+	}
 
 	local function setSavedFoundKeysAndValuesTable(NewValue)
-		self.SavedFoundKeysAndValuesTable = NewValue
-	end
-	
-	local function setSavedConvertedKeysAndValuesTable(NewValue)
-		self.SavedConvertedKeysAndValuesTable = NewValue
+	  self.SavedFoundKeysAndValuesTable = NewValue
 	end
 
+	local function setSavedConvertedKeysAndValuesTable(NewValue)
+	  self.SavedConvertedKeysAndValuesTable = NewValue
+	end
 
 	local function getSavedFoundKeysAndValuesTable()
-		return self.SavedFoundKeysAndValuesTable
+	  return self.SavedFoundKeysAndValuesTable
 	end
 
 	local function getSavedConvertedKeysAndValuesTable()
-		return self.SavedConvertedKeysAndValuesTable
+	  return self.SavedConvertedKeysAndValuesTable
 	end
 
-	
-	return 	{
-			setSavedFoundKeysAndValuesTable = setSavedFoundKeysAndValuesTable,
-			setSavedConvertedKeysAndValuesTable = setSavedConvertedKeysAndValuesTable,
-			getSavedFoundKeysAndValuesTable = getSavedFoundKeysAndValuesTable,
-			getSavedConvertedKeysAndValuesTable = getSavedConvertedKeysAndValuesTable
-			}
+	return {
+	  setSavedFoundKeysAndValuesTable = setSavedFoundKeysAndValuesTable,
+	  setSavedConvertedKeysAndValuesTable = setSavedConvertedKeysAndValuesTable,
+	  getSavedFoundKeysAndValuesTable = getSavedFoundKeysAndValuesTable,
+	  getSavedConvertedKeysAndValuesTable = getSavedConvertedKeysAndValuesTable
+	}
 end
 -- ==================================================================================
 -- ==================================================================================
